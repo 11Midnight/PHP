@@ -35,7 +35,7 @@ session_start();
        <p class="link5"><img  src="public/images/<?=$_SESSION["file_name"]?>" width="160" height="160"></p> First Name: <input type="text" name="first_name" value="<?=$_SESSION['first_name']?>">   
 	   <p class="link3"><input type="file" name="fileToUpload" id="fileToUpload" value="select img"></p>Last Name: <input type="text" name="last_name"value="<?=$_SESSION['last_name']?>">
 	   Email: <input type="text" name="email"value="<?=$_SESSION['email']?>"><br>
-	   Password: <input type="password" name="password"><br>
+	   Password: <input type="password" name="password" minlength="6"><br>
        <p class="link2"><input type="submit" class="btn" value ="Edit"></p>
    </form>
   
