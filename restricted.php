@@ -21,12 +21,9 @@ $result_role = mysqli_query($link, $query_role) or die("Ошибка " . mysqli_
 <html>
 <body>
 <style type="text/css">
-   P.link1 { text-indent: 920px;line-height: 20px;}
-   P.link2 { text-indent: 985px;}
-   P.link4 { text-indent: 895px;line-height: 20px;}
+   P.link1 { line-height: 20px;text-align: right; margin-right:430px;}
    A { font-size: 20px;}
    A.link1 { font-size: 20px;font-family: "MS Sans Serif"; text-indent: 120px;}
-   A.link2 { font-size: 20px;font-family: "MS Sans Serif"; text-indent: 140px;}
   </style>
 <!--<p class="link1"><a href="editadmin.php"><?//=$_SESSION["first_name"]?></a> | <a href="signout.php">Sing Out</a></p>-->
 <table class="table_blur">
@@ -40,7 +37,7 @@ if($_SESSION["auth"] == True):
 //echo "<b>Видно админу</b></br>";
 echo "<p class=\"link1\"><a href=\"editadmin.php\">".$_SESSION["first_name"]." | </a><a href=\"signout.php\">Sing Out</a></p>";
 //echo "<a href=\"signout.php\">Sing Out</a></br>";
-echo "<p class=\"link2\"><a href=\"registrbyadmin.php\">Add User</a></p>";
+echo "<p class=\"link1\"><a href=\"registrbyadmin.php\">Add User</a></p>";
 if($result)
 {
 
@@ -91,7 +88,7 @@ mysqli_close($link);
 //echo "Welcome, ".$_SESSION["first_name"]."</br>";
 ?>
 <?php else:
-echo "<p class=\"link4\"><a href=\"edit.php\">".$_SESSION["first_name"]." | </a><a href=\"signout.php\">Sing Out</a></p>";
+echo "<p class=\"link1\"><a href=\"edit.php\">".$_SESSION["first_name"]." | </a><a href=\"signout.php\">Sing Out</a></p>";
 if($result)
 {
 
