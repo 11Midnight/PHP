@@ -21,11 +21,9 @@ $result_role = mysqli_query($link, $query_role) or die("Ошибка " . mysqli_
 <html>
 <body>
 <style type="text/css">
-   P.link1 { text-indent: 880px;line-height: 20px;}
-   P.link2 { text-indent: 905px;}
+   P.link1 { line-height: 20px;text-align: right; margin-right:510px;}
    A { font-size: 20px;}
    A.link1 { font-size: 20px;font-family: "MS Sans Serif"; text-indent: 120px;}
-   A.link2 { font-size: 20px;font-family: "MS Sans Serif"; text-indent: 140px;}
   </style>
 <table class="table_blur">
 <thead>
@@ -85,14 +83,14 @@ mysqli_close($link);
 <?php
 if  (isset ($_SESSION["auth"])){
 	if($_SESSION["auth"] == True){
-	echo "<p class=\"link2\"><a href=\"restricted.php\">User Page</a></p>";
+	echo "<p class=\"link1\"><a href=\"restricted.php\">User Page</a></p>";
 	}
 	elseif($_SESSION["auth"] == False){
-	echo "<p class=\"link2\"><a href=\"restricted.php\">User Page</a></p>"; 
+	echo "<p class=\"link1\"><a href=\"restricted.php\">User Page</a></p>"; 
 	}
 	}
 else{
-echo "<p class=\"link2\"><a href=\"nonreg.php\">User Page</a></p>"; 
+echo "<p class=\"link1\"><a href=\"nonreg.php\">User Page</a></p>"; 
 }
 ?>
 </tbody>
