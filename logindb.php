@@ -27,7 +27,7 @@
 <div class="container">
    <form method="post">
        Email: <input type="text" name="email"><br>
-       Password: <input type="password" name="password"><br>
+       Password: <input type="password" name="password" minlength="6"><br>
        <input type="submit" class="btn"value="Войти">
    </form>
 </div>
