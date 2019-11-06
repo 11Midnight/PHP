@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="style1.css">
 <link rel="stylesheet" href="style.css">
 
 <!doctype html>
@@ -19,7 +19,6 @@ session_start();
    <meta name="viewport"
          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    <style>
        .container {
            width: 400px;
@@ -32,47 +31,21 @@ session_start();
        First Name: <input type="text" name="first_name"><br>
        Last Name: <input type="text" name="last_name"><br>
 	   Email: <input type="text" name="email"><br>
-	   Password: <input type="password" name="password"><br>
-	   <select  name="country">
- <option value="Австралия">Австралия</option>
- <option value="Австрия">Австрия</option>
- <option value="Азербайджан">Азербайджан</option>
- <option value="Албания">Албания</option>
- <option value="Алжир">Алжир</option>
-</select>
-	   Role: <input type="text" name="role"><br>
+	   Password: <input type="password" name="password" minlength="6"><br>
+
 	   <input type="file" name="fileToUpload" id="fileToUpload" value="select img"> 
-	  <!--<select name="id_role" id="id_role">
-                    <option>1</option>
-                    <option>2</option>
-                </select><br>
-	    <p><select size="3" required  name="role">
-		<option disabled>Выберите роль</option>
+	    <p><select  required  name="role">
+		<option >Выберите роль</option>
 		<option value="1">Admin</option>
 		<option value="2">User</option>
-		</select></p>-->
+		</select></p>
        <p><input type="submit" class="btn" value="Registration"></p>
    </form>
-  <!-- <form method "post">
-   <p><strong>Выберите роль</strong></p>
-   <p><select name="role">
-    <option value="1" selected>NonRegUser</option>
-    <option value="2">User</option>
-    <option value="3">Admin</option>
-   </select> 
-   <input type="submit" class="btn"></p>
-  </form> -->
 </div>
 </body>
 </html>
-
 <html>
 <body>
-<!--<form method="POST"> --указание метода POST
-Login: <input type="text" name="login" value="">
-Password: <input type="text" name="password" value="">
-<input type="submit" value="Отправить">
-</form>-->
 <?php
 $servername = "localhost";
 $username = "root";
