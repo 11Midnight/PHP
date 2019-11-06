@@ -3,7 +3,7 @@
 session_start();
 ?>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="style1.css">
 
 
 <!doctype html>
@@ -22,7 +22,6 @@ session_start();
    <meta name="viewport"
          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    <style>
        .container {
            width: 400px;
@@ -35,8 +34,12 @@ session_start();
        <p class="link5"><img class="link6" src="public/images/<?=$_SESSION["file_name"]?>" width="160" height="160"></p> First Name: <input type="text" name="first_name" value="<?=$_SESSION['first_name']?>">   
 	   <p class="link3"><input type="file" name="fileToUpload" id="fileToUpload" value="select img"></p>Last Name: <input type="text" name="last_name"value="<?=$_SESSION['last_name']?>">
 	   Email: <input type="text" name="email"value="<?=$_SESSION['email']?>"><br>
-	   Password: <input type="password" name="password"><br>
-	   Role: <input type="text" name="role"value="<?=$_SESSION['role']?>"><br>
+	   Password: <input type="password" name="password" minlength="6"><br>
+	    <p><select  required  name="role">
+		<option >Выберите роль</option>
+		<option value="1">Admin</option>
+		<option value="2">User</option>
+		</select></p>
        <p class="link2"><input type="submit" class="btn" value ="Edit"></p>
    </form>
    
